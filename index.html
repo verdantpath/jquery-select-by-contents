@@ -5,11 +5,13 @@
 <meta charset="utf-8" />
 </head>
 <body>
-  <p>Hello, world!</p>
+  <div>
+  <p><a href="#">Hello, world!</a></p>
+</div>
 <script type="text/JavaScript" src="https://ajax.googleapis.com/ajax/libs/jquery/1.12.4/jquery.min.js"></script>
 <script type="text/JavaScript">
-  $('p:contains("Hello")').addClass('select');
-
+  // $('p:contains("Hello")').addClass('select'); // use the contains() filter to select by text content
+  $('div:has(p a:contains("world"))').addClass('selected'); //the :hass() filter can select nested elements
 </script>
 </body>
 </html>
